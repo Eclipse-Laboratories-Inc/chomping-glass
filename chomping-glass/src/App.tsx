@@ -17,7 +17,7 @@ import { toast } from "react-toastify";
 window.Buffer = Buffer;
 
 const PROGRAM_ID = new PublicKey(
-  "Gg9RXnAuiQDYadKP4tExAFCkhXSc3kBywCGqqPVx2duH"
+  "GPtkUuvzi516LoJCSpYrhb2cNJb6GRDJsoAkqcJ5VcLy"
 );
 const FEE = new PublicKey("EGJnqcxVbhJFJ6Xnchtaw8jmPSvoLXfN2gWsY9Etz5SZ");
 
@@ -230,7 +230,7 @@ function App() {
       );
     } else if (connection.rpcEndpoint.includes("eclipsenetwork")) {
       console.log(
-          `https://solscan.io/tx/${signature}?cluster=custom&customUrl=https%3A%2F%2Fstaging-rpc.dev.eclipsenetwork.xyz`
+        `https://solscan.io/tx/${signature}?cluster=custom&customUrl=https%3A%2F%2Fstaging-rpc.dev.eclipsenetwork.xyz`
       );
     } else {
       console.log(`https://solscan.io/tx/${signature}`);
@@ -281,7 +281,7 @@ function App() {
           }
           notify(
             `${signature}`,
-            `https://solscan.io/tx/${signature}?cluster=custom&customUrl=https%3A%2F%2Fstaging-rpc.dev.eclipsenetwork.xyz`,
+            `https://solscan.io/tx/${signature}`,
             "View on Solscan"
           );
         } else {
@@ -416,9 +416,18 @@ function App() {
         Chomping Glass: Eclipse Devnet
       </h1>
       <div
-              style={{ display: "flex", padding: "5px", justifyContent: "center", fontWeight: "bold" }}
+        style={{
+          display: "flex",
+          padding: "5px",
+          justifyContent: "center",
+          fontWeight: "bold",
+        }}
       >
-        You'll need to install an&nbsp;<a href="https://docs.eclipse.builders/building-on-eclipse/developer-wallet-setup">Eclipse developer wallet</a> &nbsp;to play this game.
+        You'll need to install an&nbsp;
+        <a href="https://docs.eclipse.builders/building-on-eclipse/developer-wallet-setup">
+          Eclipse developer wallet
+        </a>{" "}
+        &nbsp;to play this game.
       </div>
       <div
         style={{ display: "flex", padding: "5px", justifyContent: "center" }}
